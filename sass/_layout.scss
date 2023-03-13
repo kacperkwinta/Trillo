@@ -3,7 +3,6 @@
 	margin: 8rem auto;
 	background-color: var(--color-grey-light-1);
 	box-shadow: var(--shadow-dark);
-	height: 50rem;
 }
 
 .header {
@@ -36,5 +35,24 @@
 	background-color: #fff;
 	// grow as much as can
 	flex: 1;
-	height: 80rem;
+}
+
+.details {
+	display: flex;
+	gap: 4.5rem;
+	padding: 4.5rem;
+	background-color: var(--color-grey-light-1);
+	border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.description {
+	padding: 3rem;
+	font-size: 1.4rem;
+	flex: 0 0 60%;
+	background-color: #fff;
+	box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+.user-reviews {
+	flex: 1;
 }
