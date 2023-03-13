@@ -7,21 +7,61 @@
 ////////////////////////////////
 /// search box
 .search {
+	flex: 0 0 40%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	&__input {
+		font-family: inherit;
+		font-size: inherit;
+		background-color: var(--color-grey-light-2);
+		color: inherit;
+		padding: 0.7rem 2rem;
+		border: none;
+		border-radius: 10rem;
+		width: 80%;
+		transition: all 0.2s ease;
+
+		&:focus {
+			width: 90%;
+			background-color: var(--color-grey-light-3);
+		}
+
+		&::placeholder {
+			font-weight: 100;
+			color: var(--color-grey-light-4);
+		}
+	}
+
+	&__input:focus + &__button {
+		background-color: var(--color-grey-light-3);
 	}
 
 	&__button {
+		margin-left: -3.5rem;
+		border: none;
+		background-color: var(--color-grey-light-2);
+		transition: all 0.1s ease;
+
+		&:active {
+			transform: translateY(2px);
+		}
 	}
 
 	&__icon {
 		height: 2.25rem;
 		width: 2.25rem;
+		fill: var(--color-grey-dark-2);
 	}
 }
 
 /// ////////////////////////////////
 /// user nav
 .user-nav {
+	display: flex;
+
 	&__icon-box {
 	}
 
