@@ -31,6 +31,17 @@ body {
   background-repeat: no-repeat no-repeat;
   height: 100vh; }
 
+.logo {
+  height: 3.25rem; }
+
+.search__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__user-photo {
+  height: 3.75rem;
+  border-radius: 50%; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
