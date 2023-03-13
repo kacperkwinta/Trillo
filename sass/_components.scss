@@ -119,29 +119,74 @@
 ////////////////////////////////////
 /// sidebar
 .side-nav {
-    
+	font-size: 1.4rem;
+	list-style-type: none;
+	margin-top: 3.5rem;
+
 	&__item {
+		position: relative;
+
+		&--active {
+			background-color: var(--color-primary);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 3px;
+			background-color: var(--color-primary);
+			transform: scaleY(0);
+			transition: transform 0.2s ease, width 0.3s ease 0.2s;
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+			width: 100%;
+		}
+
+		&:active::before {
+			background-color: var(--color-primary-light);
+		}
 	}
 
 	&__link {
+		position: relative;
+		z-index: 111;
+
+		&:link,
+		&:visited {
+			color: var(--color-grey-light-1);
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+			padding: 1.5rem 3rem;
+			transition: all 0.3s ease;
+
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__icon {
 		width: 1.75rem;
 		height: 1.75rem;
+		margin-right: 2rem;
+		fill: currentColor;
 	}
-
-	span {
-	}
-
-	
 }
 
 ////////////////////////////////////
 /// legal
 .legal {
-		font-size: 1.2rem;
-		text-align: center;
-		padding: 2.5rem;
-		color: var(--color-grey-light-4);
-	}
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 2.5rem;
+	color: var(--color-grey-light-4);
+}
