@@ -26,10 +26,15 @@
 	// shorthand for flex-grow / shrink / basis
 	flex: 0 0 18%;
 	background-color: var(--color-grey-dark-1);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .hotel-view {
 	background-color: #fff;
 	// grow as much as can
 	flex: 1;
+	height: 80rem;
 }
