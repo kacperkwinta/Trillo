@@ -61,24 +61,57 @@
 /// user nav
 .user-nav {
 	display: flex;
+	align-self: stretch;
+	align-items: center;
+	gap: 3rem;
+
+	transition: all 0.2s ease;
+
+	& > * {
+		cursor: pointer;
+		height: 100%;
+
+		&:hover {
+			background-color: var(--color-grey-light-2);
+		}
+	}
 
 	&__icon-box {
+		display: flex;
+		align-items: center;
+		position: relative;
 	}
 
 	&__icon {
+		height: 2.25rem;
+		width: 2.25rem;
+		fill: var(--color-grey-dark-2);
 	}
 
 	&__notification {
+		font-size: 0.8rem;
+		width: 1.75rem;
+		height: 1.75rem;
+		border-radius: 10rem;
+		background-color: var(--color-primary);
+		color: #fff;
+		position: absolute;
+		top: 1.5rem;
+		right: -1rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__user {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	&__user-photo {
 		height: 3.75rem;
 		border-radius: 50%;
-	}
-
-	&__user-name {
 	}
 }
