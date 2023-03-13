@@ -78,8 +78,6 @@ body {
   .user-nav > * {
     cursor: pointer;
     height: 100%; }
-    .user-nav > *:hover {
-      background-color: var(--color-grey-light-2); }
   .user-nav__icon-box {
     display: flex;
     align-items: center;
@@ -157,6 +155,22 @@ body {
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4); }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    display: block;
+    width: 100%; }
+
+.overview {
+  display: flex;
+  gap: 2.4rem; }
+  .overview__stars {
+    margin-right: auto; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
 
 .container {
   max-width: 120rem;
