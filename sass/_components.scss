@@ -123,6 +123,11 @@
 	list-style-type: none;
 	margin-top: 3.5rem;
 
+	@media only screen and (max-width: $bp-medium) {
+		display: flex;
+		margin: 0;
+	}
+
 	&__item {
 		position: relative;
 
@@ -132,6 +137,10 @@
 
 		&:not(:last-child) {
 			margin-bottom: 1rem;
+
+			@media only screen and (max-width: $bp-medium) {
+				margin-bottom: 0;
+			}
 		}
 
 		&::before {
@@ -153,6 +162,12 @@
 
 		&:active::before {
 			background-color: var(--color-primary-light);
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			flex: 1;
+			display: flex;
+			justify-content: center;
 		}
 	}
 
@@ -189,6 +204,10 @@
 	text-align: center;
 	padding: 2.5rem;
 	color: var(--color-grey-light-4);
+
+	@media only screen and (max-width: $bp-medium) {
+		display: none;
+	}
 }
 
 ////////////////////////////////////
@@ -336,6 +355,10 @@
 	align-items: center;
 	justify-content: space-between;
 
+	&__friends {
+		display: flex;
+	}
+
 	&__photo {
 		box-sizing: content-box;
 		height: 4rem;
@@ -424,6 +447,10 @@
 		text-transform: uppercase;
 		margin-bottom: 2.5rem;
 	}
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 2.5rem 0;
+	}
 }
 
 .btn {
@@ -461,6 +488,11 @@
 
 	&:hover {
 		cursor: pointer;
+		background-image: linear-gradient(
+			to left,
+			var(--color-primary-light),
+			var(--color-primary-dark)
+		);
 	}
 
 	&:hover &__visible {
